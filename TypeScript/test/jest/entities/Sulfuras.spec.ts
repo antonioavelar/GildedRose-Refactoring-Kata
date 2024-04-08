@@ -1,5 +1,5 @@
-import { SULFURAS_ITEM_NAME } from "@/utils/constants";
-import { Sulfuras } from "@/categories/Sulfuras";
+import { SULFURAS_ITEM_NAME } from "../../../app/utils/constants";
+import { Sulfuras } from "../../../app/categories/Sulfuras";
 
 describe("Testing Sulfuras item class", () => {
   describe("Testing class constructor()", () => {

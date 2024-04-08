@@ -1,4 +1,4 @@
-import { Item } from "@/gilded-rose";
+import { Item } from "./gilded-rose";
 import {
   AgedBrie,
   Backstage,

@@ -1,5 +1,5 @@
 import { AbstractItem } from "./AbstractItem";
-import { AGED_BRIE_ITEM_NAME } from "@/utils/constants";
+import { AGED_BRIE_ITEM_NAME } from "../utils/constants";
 
 export class AgedBrie extends AbstractItem {
   protected readonly NORMAL_QUALITY_INCREMENT = 1;

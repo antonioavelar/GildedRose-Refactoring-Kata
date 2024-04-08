@@ -2,8 +2,8 @@ import {
   AGED_BRIE_ITEM_NAME,
   BACKSTAGE_ITEM_NAME,
   SULFURAS_ITEM_NAME,
-} from "@/utils/constants";
-import { Item, GildedRose } from "@/gilded-rose";
+} from "../../app/utils/constants";
+import { Item, GildedRose } from "../../app//gilded-rose";
 
 describe("Gilded Rose", () => {
   describe("Testing contructor", () => {

@@ -1,5 +1,5 @@
 import { AbstractItem } from "./AbstractItem";
-import { BACKSTAGE_ITEM_NAME } from "@/utils/constants";
+import { BACKSTAGE_ITEM_NAME } from "../utils/constants";
 
 export class Backstage extends AbstractItem {
   protected NORMAL_QUALITY_INCREMENT = 1;

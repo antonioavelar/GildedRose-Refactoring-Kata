@@ -1,6 +1,6 @@
-import { Item } from "@/gilded-rose";
+import { Item } from "../gilded-rose";
 import { AbstractItem } from "./AbstractItem";
-import { SULFURAS_ITEM_NAME } from "@/utils/constants";
+import { SULFURAS_ITEM_NAME } from "../utils/constants";
 
 export class Sulfuras extends AbstractItem {
   protected readonly NORMAL_QUALITY_INCREMENT = 0;

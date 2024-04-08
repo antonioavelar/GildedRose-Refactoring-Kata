@@ -1,4 +1,4 @@
-import { CommonItem } from "@/categories/CommonItem";
+import { CommonItem } from "../../../app/categories/CommonItem";
 
 describe("Testing CommonItem class", () => {
   describe("Testing .update() method", () => {

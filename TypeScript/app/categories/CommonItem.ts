@@ -1,7 +1,7 @@
 import {
   COMMON_EXPIRED_QUALITY_INCREMENT,
   COMMON_NORMAL_QUALITY_INCREMENT,
-} from "@/utils/constants";
+} from "../utils/constants";
 import { AbstractItem } from "./AbstractItem";
 
 export class CommonItem extends AbstractItem {

@@ -1,12 +1,12 @@
-import { Item } from "@/gilded-rose";
-import { ItemFactory } from "@/item-factory";
+import { Item } from "../../app/gilded-rose";
+import { ItemFactory } from "../../app/item-factory";
 
 import {
   AGED_BRIE_ITEM_NAME,
   BACKSTAGE_ITEM_NAME,
   CONJURED_ITEM_NAME,
   SULFURAS_ITEM_NAME,
-} from "@/utils/constants";
+} from "../../app/utils/constants";
 
 describe("ItemFactory", () => {
   describe("Testing createItem()", () => {

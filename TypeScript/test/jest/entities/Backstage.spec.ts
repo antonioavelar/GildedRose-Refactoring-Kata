@@ -1,5 +1,5 @@
-import { BACKSTAGE_ITEM_NAME } from "@/utils/constants";
-import { Backstage } from "@/categories/Backstage";
+import { BACKSTAGE_ITEM_NAME } from "../../../app/utils/constants";
+import { Backstage } from "../../../app/categories/Backstage";
 
 describe("Testing Backstage class", () => {
   describe("Testing .update() method", () => {

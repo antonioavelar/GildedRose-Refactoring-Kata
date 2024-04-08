@@ -1,5 +1,5 @@
-import { AGED_BRIE_ITEM_NAME } from "@/utils/constants";
-import { AgedBrie } from "@/categories/AgedBrie";
+import { AGED_BRIE_ITEM_NAME } from "../../../app/utils/constants";
+import { AgedBrie } from "../../../app/categories/AgedBrie";
 
 describe("Testing AgedBrie item class", () => {
   describe("Testing .update() method", () => {

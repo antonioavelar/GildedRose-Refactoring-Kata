@@ -1,5 +1,5 @@
-import { ConjuredItem } from "@/categories/ConjuredItem";
-import { CONJURED_ITEM_NAME } from "@/utils/constants";
+import { ConjuredItem } from "../../../app/categories/ConjuredItem";
+import { CONJURED_ITEM_NAME } from "../../../app/utils/constants";
 
 describe("Testing ConjuredItem class", () => {
   describe("Testing .update() method", () => {
