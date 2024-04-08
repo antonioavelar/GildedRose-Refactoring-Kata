@@ -1,16 +1,20 @@
-import { Item } from "@/gilded-rose";
+export abstract class AbstractItem {
+  name: string;
+  quality: number;
+  sellIn: number;
 
-export abstract class AbstractItem extends Item {
   protected abstract NORMAL_QUALITY_INCREMENT;
   protected abstract EXPIRED_QUALITY_INCREMENT;
 
   constructor(name: string, sellIn: number, quality: number) {
-    super(name, sellIn, quality);
+    this.name = name;
+    this.sellIn = sellIn;
+    this.quality = quality;
   }
 
-  update(): Item {
+  update() {
     const qualityIncrement =
-      this.sellIn > 1
+      this.sellIn >= 1
         ? this.NORMAL_QUALITY_INCREMENT
         : this.EXPIRED_QUALITY_INCREMENT;
 
@@ -34,9 +38,12 @@ export abstract class AbstractItem extends Item {
 
     const result = this.quality + amount;
 
-    // Prevent result from being below 0
+    // Prevent result from smaller than 0
     if (result < 0) {
       this.quality = 0;
+      // Prevent result from being bigger than 0
+    } else if (result > 50) {
+      this.quality = 50;
     } else {
       this.quality = result;
     }
