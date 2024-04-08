@@ -5,7 +5,7 @@ import {
   CommonItem,
   ConjuredItem,
   Sulfuras,
-} from "./entities";
+} from "./categories";
 import {
   AGED_BRIE_ITEM_NAME,
   BACKSTAGE_ITEM_NAME,
@@ -13,7 +13,7 @@ import {
   SULFURAS_ITEM_NAME,
 } from "./utils/constants";
 
-type ItemFactoryReturn =
+type ItemProcessor =
   | CommonItem
   | AgedBrie
   | Backstage
@@ -21,18 +21,28 @@ type ItemFactoryReturn =
   | Sulfuras;
 
 export class ItemFactory {
-  static createItem(item: Item): ItemFactoryReturn {
+  static createItem(item: Item): Item {
+    let processor: ItemProcessor;
+
     switch (item.name) {
       case AGED_BRIE_ITEM_NAME:
-        return new AgedBrie(item.name, item.sellIn, item.quality);
+        processor = new AgedBrie(item.name, item.sellIn, item.quality);
+        break;
       case BACKSTAGE_ITEM_NAME:
-        return new Backstage(item.name, item.sellIn, item.quality);
+        processor = new Backstage(item.name, item.sellIn, item.quality);
+        break;
       case CONJURED_ITEM_NAME:
-        return new ConjuredItem(item.name, item.sellIn, item.quality);
+        processor = new ConjuredItem(item.name, item.sellIn, item.quality);
+        break;
       case SULFURAS_ITEM_NAME:
-        return new Sulfuras(item.name, item.sellIn, item.quality);
+        processor = new Sulfuras(item.name, item.sellIn, item.quality);
+        break;
       default:
-        return new CommonItem(item.name, item.sellIn, item.quality);
+        processor = new CommonItem(item.name, item.sellIn, item.quality);
     }
+
+    const result = processor.update();
+
+    return new Item(result.name, result.sellIn, result.quality);
   }
 }

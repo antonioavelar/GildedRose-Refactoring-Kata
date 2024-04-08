@@ -1,5 +1,5 @@
 import { BACKSTAGE_ITEM_NAME } from "@/utils/constants";
-import { Backstage } from "@/entities/Backstage";
+import { Backstage } from "@/categories/Backstage";
 
 describe("Testing Backstage class", () => {
   describe("Testing .update() method", () => {

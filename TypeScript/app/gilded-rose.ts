@@ -20,14 +20,7 @@ export class GildedRose {
   }
 
   updateQuality() {
-    this.items.forEach((item) => {
-      const itemInstance = ItemFactory.createItem(item);
-
-      itemInstance.update();
-      item.name = itemInstance.name;
-      item.sellIn = itemInstance.sellIn;
-      item.quality = itemInstance.quality;
-    });
+    this.items = this.items.map((item) => ItemFactory.createItem(item));
 
     return this.items;
   }

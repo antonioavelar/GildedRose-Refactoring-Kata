@@ -1,4 +1,4 @@
-import { ConjuredItem } from "@/entities/ConjuredItem";
+import { ConjuredItem } from "@/categories/ConjuredItem";
 import { CONJURED_ITEM_NAME } from "@/utils/constants";
 
 describe("Testing ConjuredItem class", () => {
