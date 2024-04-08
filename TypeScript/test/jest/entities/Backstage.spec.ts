@@ -40,11 +40,11 @@ describe("Testing Backstage class", () => {
     });
 
     it("should not increase quality above 50", () => {
-      const backstage = new Backstage(BACKSTAGE_ITEM_NAME, 10, 50);
+      const backstage = new Backstage(BACKSTAGE_ITEM_NAME, 8, 50);
 
       const result = backstage.update();
 
-      expect(result.quality).toBe(50);
+      expect(result.sellIn).toBe(7);
       expect(result.quality).toBe(50);
     });
   });
